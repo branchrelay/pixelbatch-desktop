@@ -1,0 +1,9 @@
+customtkinter==5.2.2
+Pillow>=10.4,<13
+requests>=2.32,<3
+rembg[cpu]==2.0.76
+onnxruntime>=1.20,<2
+keyring>=25,<26
+platformdirs>=4,<5
+pytest>=8,<9
+PyInstaller>=6.14,<7
