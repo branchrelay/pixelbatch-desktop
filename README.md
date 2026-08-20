@@ -5,6 +5,8 @@
 
 Version: `0.1.0-alpha`
 
+[**Download latest Windows release**](https://github.com/branchrelay/pixelbatch-desktop/releases/tag/v0.1.0-alpha)
+
 > This project is currently in alpha development. Features and interfaces may change.
 
 PixelBatch is a Windows desktop application for batch image processing. Its main purpose is background removal, resizing, format conversion, background and padding setup, mass file renaming, and preparation of images for e-commerce and content management.
@@ -24,6 +26,16 @@ The main app works without an API key. Local tools — background removal after 
 AI image generation is experimental. It requires a provider API key and should be treated separately from the local batch processing tools.
 
 PixelBatch does not collect telemetry and does not use its own external servers. Prompts are sent only to the active AI provider when the experimental generation tool is used.
+
+## Screenshots
+
+### Remove Background
+
+![PixelBatch Remove Background interface](docs/screenshots/remove-background.png)
+
+### Add Background preview
+
+![PixelBatch Add Background preview](docs/screenshots/add-background-preview.png)
 
 ## Requirements
 
@@ -132,22 +144,16 @@ If pytest cannot access the system temp folder on Windows, run it with `TMP` and
 - First rembg use can be slower because the selected model may need to download.
 - Original-file renaming has preview and conflict checks, but there is no full undo after successful rename.
 
-## Preparing a private GitHub repository
+## Contributing
 
-Recommended repository root: this `PixelBatch/` project folder.
-
-Before the first commit:
+Issues and focused pull requests are welcome. Before submitting a change, run:
 
 ```powershell
 git status --short
 python -m pytest -q
 ```
 
-Include source code, tests, documentation, `requirements.txt`, `PixelBatch.spec`, `build.ps1`, `run.ps1`, `assets/icon.ico`, `.gitignore`, `.env.example`, `LICENSE`, `SECURITY.md`, and `GITHUB_PUBLISHING_CHECKLIST.md`.
-
-Exclude `.env`, `settings.json`, `.venv/`, `build/`, `dist/`, `logs/`, `cache/`, `temp/`, user input/output folders, downloaded model weights, and built `.exe` files.
-
-See `GITHUB_PUBLISHING_CHECKLIST.md` for a concise checklist.
+Keep `.env`, `settings.json`, `.venv/`, `build/`, `dist/`, logs, generated output, downloaded model weights, user data, and built `.exe` files out of commits.
 
 ## License
 
